@@ -92,6 +92,9 @@ function createApp(database: Database) {
     if (date && isMonday(date) && !isHoliday(date)) {
       reduction = 35;
     }
+    if (tempdate && tempIsMonday(tempdate) && !tempIsHoliday(tempdate)) {
+      reduction = 35;
+    }
     return reduction;
   }
 
