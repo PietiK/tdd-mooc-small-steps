@@ -99,6 +99,10 @@ function createApp(database: Database) {
     return date.getDay() === 1;
   }
 
+  function tempIsMonday(date: Temporal.PlainDate) {
+    return date.dayOfWeek === 1;
+  }
+
   function isHoliday(date: Date | undefined) {
     const holidays = database.getHolidays();
     for (let row of holidays) {
